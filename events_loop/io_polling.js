@@ -24,6 +24,7 @@ Promise.resolve().then(()=>{
 //and from the call stack they are transfered to their respective queues
 //initially io queue is empty.
 //when the control reaches io queue after micro and timer, the control is transfered to io polling
+
 //io polling checks if the io operations are completed or not i.e read file is completed or not
 //if it is completed then callback is added to the io queue
 //but at that time the control is at check queue, so it executes callback in the check queue

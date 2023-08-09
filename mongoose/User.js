@@ -52,7 +52,7 @@ userSchema.methods.sayHi = function ( ) {
 }
 
 //*****schema statics*****
-//statistis can be called on the model itself
+//statics can be called on the model itself
 userSchema.statics.findByName = function (name){
     return this.find({name : new RegExp(name, 'i')})
 }

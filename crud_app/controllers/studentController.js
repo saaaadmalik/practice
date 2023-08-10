@@ -54,7 +54,7 @@ const updateStudentPage = async (req, res, next) => {
         const student = await StudentService.QueryGetStudentDetails(req.params.id)
         if (!student) {
             const error = new Error('Student not found')
-            error.status = 404
+            error.statusCode = 404
             throw error
         }
         res.render('updatestudent', { student: student })
@@ -64,7 +64,6 @@ const updateStudentPage = async (req, res, next) => {
         next(error)
 
     }
-
 
 }
 const updateStudent = async (req, res,next) => {
@@ -81,14 +80,13 @@ const updateStudent = async (req, res,next) => {
 
     }
 
-
 }
 const deleteStudentPage = async (req, res,next) => {
     try {
         const student = await StudentService.QueryGetStudentDetails(req.params.id)
         if (!student) {
             const error = new Error('Student not found')
-            error.status = 404
+            error.statusCode = 404
             throw error
         }
         res.render('deletestudent', { student: student })
@@ -111,8 +109,6 @@ const deleteStudent = async (req, res,next) => {
         res.status(500)
         next(error)
     }
-
-
 }
 
 module.exports = {

@@ -29,7 +29,7 @@ const QueryUpdateStudent = async (studentId,data) =>{
     const student = await Student.findById(studentId)
     if(!student){
         const error = new Error('Student not found')
-        error.status = 404
+        error.statusCode = 404
         throw error
     }
     data.name ? student.name = data.name : null

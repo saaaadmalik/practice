@@ -20,6 +20,7 @@ app.set('view engine','ejs')
 
 app.use('/', userRoutes)
 app.use('/students', studentRoutes)
+
 app.use(error)
 
 app.listen(3000,()=>{

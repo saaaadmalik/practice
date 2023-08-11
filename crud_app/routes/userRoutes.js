@@ -8,4 +8,7 @@ router.route('/register').get(UserController.registerPage)
 router.route('/register').post(UserController.register)
 router.route('/logout').get(UserController.logout)
 
+router.route('/forgotPassword').post(UserController.forgotPassword)
+router.route('/resetPassword/:token').patch(UserController.resetPassword)
+
 module.exports = router;
